@@ -65,9 +65,9 @@ def _quadratic_multiply(x, y): #x,y are Binarynumber
     else:
       l_xvec,r_xvec = split_number(xvec)
       l_yvec,r_yvec = split_number(yvec)
-    #a = xl*yl
+    #a(left product) = xl*yl
     a = _quadratic_multiply(l_xvec,l_yvec)
-  #b = (xl + xr) * (yl + yr)
+  #b(right product) = (xl + xr) * (yl + yr)
     b = _quadratic_multiply(BinaryNumber(l_xvec.decimal_val + r_xvec.decimal_val),BinaryNumber(l_yvec.decimal_val+r_yvec.decimal_val))
   #c = xr*yr
     c = _quadratic_multiply(r_xvec,r_yvec)
